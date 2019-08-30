@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Web</title>
+</head>
+<body>
+  HELLO WORLD!!!
+  <button onclick="express()">Press</button>
+  <script>
+    function express() {
+      fetch('http://127.0.0.1:80/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(myJson) {
+          console.log(myJson);
+        });
+    }
+  </script>
+</body>
+</html>
